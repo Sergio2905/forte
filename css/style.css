@@ -133,15 +133,14 @@ h6 {
   --app-height: 100%;
   --white: #fff;
   --black: #000;
-  --green: #4CBE57;
-  --blue: #2D68FF;
-  --red: #F24D4D;
+  --blue: #3CB0DF;
+  --red: #CD376C;
   --bg: url("../img/loading.gif") 50% no-repeat;
 }
 
 body {
-  font-family: "Gilroy";
-  font-weight: 600;
+  font-family: "Cignika";
+  font-weight: 400;
   color: var(--black);
 }
 
@@ -611,6 +610,282 @@ body.lock {
   width: 100%;
 }
 
+.app {
+  position: relative;
+  padding: 100px 0;
+}
+
+.app__bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.app__bg img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.app__title {
+  position: relative;
+  z-index: 1;
+  text-align: center;
+  color: var(--white);
+  font-family: "DS Pixel";
+  font-size: 5rem;
+  font-weight: 400;
+  text-transform: uppercase;
+  text-shadow: 6px 5px 0 #1b526f;
+  margin-bottom: 70px;
+}
+
+.app__content {
+  display: flex;
+}
+
+.app__left {
+  flex: 1 1 50%;
+  padding-right: 80px;
+}
+
+.app__man {
+  position: relative;
+  z-index: 1;
+  max-width: 370px;
+  width: 100%;
+  align-self: flex-end;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  flex: 1 1 auto;
+}
+
+.app__image {
+  max-width: 360px;
+  width: 100%;
+  margin-top: -50px;
+  position: relative;
+  z-index: 2;
+}
+
+.app__image img {
+  width: 100%;
+}
+
+.app__label {
+  color: #1B526F;
+  font-family: "DS Pixel";
+  font-size: 3.125rem;
+  text-transform: uppercase;
+  text-shadow: 6px 5px 0 #cd376c;
+  position: absolute;
+  top: 100px;
+  left: 0;
+  transform: translate(-100px, 0);
+}
+
+.app__card {
+  position: relative;
+  z-index: 1;
+}
+
+.app__card_left {
+  max-width: 420px;
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.app__card_right {
+  max-width: 500px;
+  width: 100%;
+  align-self: flex-end;
+}
+
+.app__card_mini {
+  max-width: 340px;
+  align-self: flex-end;
+}
+
+.app__right {
+  flex: 1 1 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding-top: 570px;
+}
+
+.app__phone {
+  margin: 300px 0 20px;
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.app__phone-image {
+  max-width: 306px;
+  width: 100%;
+}
+
+.app__phone-image img {
+  width: 100%;
+}
+
+.app__people {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 1030px;
+  height: 770px;
+  z-index: 2;
+  animation: flyingPeople 3s ease-out infinite;
+}
+
+.app__people img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+
+.card {
+  padding: 30px;
+  border-radius: 10px;
+  border: 2px solid rgba(255, 255, 255, 0.8);
+  background: rgba(27, 82, 111, 0.9);
+}
+
+.card__title {
+  color: var(--blue);
+  font-family: "Minecraft";
+  font-size: 1.125rem;
+  margin-bottom: 20px;
+}
+
+.card__text {
+  font-weight: 300;
+  color: var(--white);
+  font-size: 1.125rem;
+}
+
+.card__text:not(:last-child) {
+  margin-bottom: 20px;
+}
+
+.card__text p:not(:last-child) {
+  margin-bottom: 20px;
+}
+
+.card__item {
+  position: relative;
+  color: var(--white);
+  font-weight: 300;
+  font-size: 1.125rem;
+  padding-left: 15px;
+}
+
+.card__item::before {
+  content: "";
+  position: absolute;
+  background: var(--blue);
+  width: 24px;
+  height: 24px;
+  top: 0;
+  left: -10px;
+  background: url("../img/icons/list.svg") center/contain no-repeat;
+}
+
+.card__item:not(:last-child) {
+  margin-bottom: 5px;
+}
+
+.card__link {
+  color: var(--white);
+  font-family: "Minecraft";
+  font-size: 0.875rem;
+  transition: all 0.5s ease;
+}
+
+.card__sign {
+  color: var(--blue);
+  font-family: "Minecraft";
+  font-size: 1.125rem;
+}
+
+@keyframes flyingPeople {
+  0% {
+    transform: translate(-100vw, 100vh);
+  }
+
+  100% {
+    transform: translate(100vw, -100vh);
+  }
+}
+
+.footer {
+  background: url("../../img/footer/bg.webp") 0 0/100% 100% no-repeat;
+}
+
+.footer__body {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 100px 0;
+}
+
+.footer__left {
+  display: flex;
+  flex-direction: column;
+}
+
+.footer__rights {
+  font-weight: 300;
+  color: var(--white);
+  margin-bottom: 10px;
+}
+
+.footer__links {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.footer__link {
+  color: var(--white);
+  font-family: "Minecraft";
+  font-weight: 400;
+  text-decoration: underline;
+  transition: all 0.5s ease;
+  padding: 5px 0;
+}
+
+.footer__link:not(:last-child) {
+  margin-right: 30px;
+}
+
+.footer__right {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.footer__dev {
+  color: var(--white);
+  font-weight: 300;
+  margin-bottom: 10px;
+}
+
 @media (max-width: 1920px) {
   .main__logo {
     max-width: calc(130px + 90 * (100vw - 320px) / 1600);
@@ -709,6 +984,76 @@ body.lock {
   .welcome__desc p:last-child {
     margin-top: calc(-10px + -10 * (100vw - 320px) / 1600);
   }
+
+  .app {
+    padding: calc(50px + 50 * (100vw - 320px) / 1600) 0;
+  }
+
+  .app__title {
+    font-size: calc(1.875rem + 50 * (100vw - 20rem) / 1600);
+    margin-bottom: calc(30px + 40 * (100vw - 320px) / 1600);
+    text-shadow: calc(3px + 3 * (100vw - 320px) / 1600) calc(2px + 3 * (100vw - 320px) / 1600) 0 #1b526f;
+  }
+
+  .app__left {
+    padding-right: calc(10px + 70 * (100vw - 320px) / 1600);
+  }
+
+  .app__image {
+    max-width: calc(250px + 160 * (100vw - 320px) / 1600);
+    margin-top: calc(-35px + -15 * (100vw - 320px) / 1600);
+  }
+
+  .app__label {
+    transform: translate(calc(10px + -110 * (100vw - 320px) / 1600), 0);
+    font-size: calc(1.25rem + 30 * (100vw - 20rem) / 1600);
+  }
+
+  .app__phone-image {
+    max-width: calc(150px + 156 * (100vw - 320px) / 1600);
+  }
+
+  .app__people {
+    width: calc(250px + 780 * (100vw - 320px) / 1600);
+    height: calc(180px + 590 * (100vw - 320px) / 1600);
+  }
+
+  .card {
+    padding: calc(15px + 15 * (100vw - 320px) / 1600);
+  }
+
+  .card__title {
+    font-size: calc(0.875rem + 4 * (100vw - 20rem) / 1600);
+    margin-bottom: calc(10px + 10 * (100vw - 320px) / 1600);
+  }
+
+  .card__text {
+    font-size: calc(0.75rem + 6 * (100vw - 20rem) / 1600);
+  }
+
+  .card__text:not(:last-child) {
+    margin-bottom: calc(10px + 10 * (100vw - 320px) / 1600);
+  }
+
+  .card__text p:not(:last-child) {
+    margin-bottom: calc(10px + 10 * (100vw - 320px) / 1600);
+  }
+
+  .card__item {
+    font-size: calc(0.75rem + 6 * (100vw - 20rem) / 1600);
+  }
+
+  .card__link {
+    font-size: calc(0.625rem + 4 * (100vw - 20rem) / 1600);
+  }
+
+  .card__sign {
+    font-size: calc(0.75rem + 6 * (100vw - 20rem) / 1600);
+  }
+
+  .footer__body {
+    padding: calc(50px + 50 * (100vw - 320px) / 1600) 0;
+  }
 }
 
 @media (max-width: 992px) {
@@ -735,11 +1080,86 @@ body.lock {
     transform: translate(-20%, 0);
     padding-top: 30px;
   }
+
+  .app__content {
+    flex-direction: column;
+  }
+
+  .app__left {
+    margin-bottom: 20px;
+    padding-right: 0;
+  }
+
+  .app__man {
+    margin-bottom: 20px;
+  }
+
+  .app__right {
+    padding-top: 0;
+  }
+
+  .app__phone {
+    margin: 20px 0;
+  }
+
+  .footer__body {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .footer__left {
+    margin-bottom: 20px;
+  }
+
+  .footer__right {
+    align-items: stretch;
+  }
 }
 
 @media (max-width: 576px) {
   .welcome__phone {
     transform: translate(-60%, 0);
     padding-top: 70px;
+  }
+}
+
+@media (max-width: 480px) {
+  .footer__body {
+    align-items: center;
+  }
+
+  .footer__left {
+    align-items: center;
+  }
+
+  .footer__rights {
+    text-align: center;
+  }
+
+  .footer__links {
+    flex-direction: column;
+  }
+
+  .footer__link:not(:last-child) {
+    margin: 0 0 10px;
+  }
+
+  .footer__right {
+    align-items: center;
+  }
+
+  .footer__dev {
+    text-align: center;
+  }
+}
+
+@media (any-hover: hover) {
+  .card__link:hover {
+    color: var(--blue);
+  }
+
+  .footer__link:hover {
+    color: var(--blue);
+    text-decoration: underline;
   }
 }
