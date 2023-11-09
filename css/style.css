@@ -834,7 +834,7 @@ body.lock {
 }
 
 .footer {
-  background: url("../../img/footer/bg.webp") 0 0/100% 100% no-repeat;
+  background: url("../img/footer/bg.webp") 0 0/100% 100% no-repeat;
 }
 
 .footer__body {
