@@ -610,6 +610,130 @@ body.lock {
   width: 100%;
 }
 
+.bank {
+  position: relative;
+}
+
+.bank__bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.bank__bg img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: top;
+     object-position: top;
+}
+
+.bank__container {
+  position: relative;
+}
+
+.bank__body {
+  position: relative;
+  z-index: 1;
+  padding: 100px 0;
+}
+
+.bank__title {
+  color: var(--white);
+  font-family: "DS Pixel";
+  font-size: 5rem;
+  text-transform: uppercase;
+  text-align: center;
+  margin-bottom: 20px;
+  text-shadow: 6px 5px 0 #3cb0df;
+}
+
+.bank__subtitle {
+  color: var(--white);
+  font-family: "Minecraft";
+  font-size: 1.625rem;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.bank__desc {
+  color: var(--white);
+  text-align: center;
+  font-size: 1.125rem;
+  font-weight: 300;
+}
+
+.bank__image {
+  width: 100%;
+  overflow: hidden;
+  padding-bottom: 49%;
+  position: relative;
+}
+
+.bank__image img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: top;
+     object-position: top;
+}
+
+.treasure {
+  position: relative;
+}
+
+.treasure__bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.treasure__bg img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: top;
+     object-position: top;
+}
+
+.treasure__body {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  max-width: 600px;
+  height: 1240px;
+  width: 100%;
+  z-index: 1;
+  padding: 100px 0 60px;
+}
+
+.treasure__title {
+  color: var(--white);
+  font-family: "DS Pixel";
+  font-size: 3.125rem;
+  text-transform: uppercase;
+  text-align: center;
+  margin-bottom: 20px;
+  text-shadow: 6px 5px 0 #cd376c;
+}
+
 .app {
   position: relative;
   padding: 100px 0;
@@ -766,6 +890,16 @@ body.lock {
   background: rgba(27, 82, 111, 0.9);
 }
 
+.card__main-title {
+  color: var(--white);
+  font-family: "DS Pixel";
+  font-size: 5rem;
+  text-transform: uppercase;
+  text-align: center;
+  margin-bottom: 20px;
+  text-shadow: 6px 5px 0 #cd376c;
+}
+
 .card__title {
   color: var(--blue);
   font-family: "Minecraft";
@@ -831,6 +965,167 @@ body.lock {
   100% {
     transform: translate(100vw, -100vh);
   }
+}
+
+.art {
+  position: relative;
+}
+
+.art__bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.art__bg img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.art__body {
+  position: relative;
+  z-index: 1;
+  padding: 100px 0;
+}
+
+.art__title {
+  color: var(--white);
+  font-family: "DS Pixel";
+  font-size: 5rem;
+  text-transform: uppercase;
+  text-align: center;
+  margin-bottom: 20px;
+  text-shadow: 6px 5px 0 #0e3759;
+}
+
+.art__subtitle {
+  color: var(--white);
+  font-family: "Minecraft";
+  font-size: 1.625rem;
+  margin-bottom: 60px;
+  text-align: center;
+}
+
+.art__block_horisontal {
+  margin-bottom: 100px;
+  display: flex;
+  align-items: flex-start;
+}
+
+.art__block_horisontal .art__image {
+  flex: 1 1 55%;
+  padding-bottom: 50%;
+}
+
+.art__block_horisontal .art__info {
+  flex: 1 1 45%;
+}
+
+.art__block_horisontal .art__card {
+  transform: translate(-60px, 0);
+  margin-right: -60px;
+}
+
+.art__block_vertical {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.art__block_vertical .art__image {
+  width: 100%;
+  padding-bottom: 61%;
+}
+
+.art__block_vertical .art__card {
+  max-width: 90%;
+  transform: translate(0, -30px);
+}
+
+.art__image {
+  position: relative;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.art__image img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.art__people {
+  max-width: 456px;
+  padding-left: 30px;
+}
+
+.art__people img {
+  width: 100%;
+}
+
+.dress {
+  position: relative;
+}
+
+.dress__bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.dress__bg img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.dress__body {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  padding: 100px 0 500px;
+}
+
+.dress__left {
+  flex: 1 1 60%;
+}
+
+.dress__left .card {
+  max-width: 475px;
+}
+
+.dress__card {
+  margin-bottom: 20px;
+}
+
+.dress__image {
+  margin-top: 60px;
+}
+
+.dress__image img {
+  width: 100%;
+}
+
+.dress__right {
+  flex: 1 1 40%;
+  padding-left: 60px;
 }
 
 .footer {
@@ -985,6 +1280,33 @@ body.lock {
     margin-top: calc(-10px + -10 * (100vw - 320px) / 1600);
   }
 
+  .bank__body {
+    padding: calc(50px + 50 * (100vw - 320px) / 1600) 0;
+  }
+
+  .bank__title {
+    font-size: calc(1.875rem + 50 * (100vw - 20rem) / 1600);
+    text-shadow: calc(3px + 3 * (100vw - 320px) / 1600) calc(2px + 3 * (100vw - 320px) / 1600) 0 #3cb0df;
+  }
+
+  .bank__subtitle {
+    font-size: calc(1rem + 10 * (100vw - 20rem) / 1600);
+  }
+
+  .bank__desc {
+    font-size: calc(0.875rem + 4 * (100vw - 20rem) / 1600);
+  }
+
+  .treasure__body {
+    padding: calc(20px + 80 * (100vw - 320px) / 1600) 0 60px;
+    height: calc(209px + 1031 * (100vw - 320px) / 1600);
+  }
+
+  .treasure__title {
+    font-size: calc(1.25rem + 30 * (100vw - 20rem) / 1600);
+    text-shadow: calc(3px + 3 * (100vw - 320px) / 1600) calc(2px + 3 * (100vw - 320px) / 1600) 0 #cd376c;
+  }
+
   .app {
     padding: calc(50px + 50 * (100vw - 320px) / 1600) 0;
   }
@@ -1022,6 +1344,11 @@ body.lock {
     padding: calc(15px + 15 * (100vw - 320px) / 1600);
   }
 
+  .card__main-title {
+    font-size: calc(1.875rem + 50 * (100vw - 20rem) / 1600);
+    text-shadow: calc(3px + 3 * (100vw - 320px) / 1600) calc(2px + 3 * (100vw - 320px) / 1600) 0 #cd376c;
+  }
+
   .card__title {
     font-size: calc(0.875rem + 4 * (100vw - 20rem) / 1600);
     margin-bottom: calc(10px + 10 * (100vw - 320px) / 1600);
@@ -1049,6 +1376,37 @@ body.lock {
 
   .card__sign {
     font-size: calc(0.75rem + 6 * (100vw - 20rem) / 1600);
+  }
+
+  .art__body {
+    padding: calc(50px + 50 * (100vw - 320px) / 1600) 0;
+  }
+
+  .art__title {
+    font-size: calc(1.875rem + 50 * (100vw - 20rem) / 1600);
+    text-shadow: calc(3px + 3 * (100vw - 320px) / 1600) calc(2px + 3 * (100vw - 320px) / 1600) 0 #0e3759;
+  }
+
+  .art__subtitle {
+    font-size: calc(1.125rem + 8 * (100vw - 20rem) / 1600);
+    margin-bottom: calc(24px + 36 * (100vw - 320px) / 1600);
+  }
+
+  .art__block_horisontal {
+    margin-bottom: calc(30px + 70 * (100vw - 320px) / 1600);
+  }
+
+  .dress__body {
+    padding-top: calc(50px + 50 * (100vw - 320px) / 1600);
+    padding-bottom: calc(50px + 450 * (100vw - 320px) / 1600);
+  }
+
+  .dress__image {
+    margin-top: calc(20px + 40 * (100vw - 320px) / 1600);
+  }
+
+  .dress__right {
+    padding-left: calc(20px + 40 * (100vw - 320px) / 1600);
   }
 
   .footer__body {
@@ -1120,6 +1478,52 @@ body.lock {
   .welcome__phone {
     transform: translate(-60%, 0);
     padding-top: 70px;
+  }
+
+  .art__block_horisontal {
+    flex-direction: column;
+    margin-bottom: -70px;
+  }
+
+  .art__block_horisontal .art__image {
+    width: 55%;
+  }
+
+  .art__block_horisontal .art__info {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    transform: translate(0, -110px);
+    padding: 0 10px;
+  }
+
+  .art__block_horisontal .art__card {
+    transform: translate(0, 0);
+    margin-right: 0;
+  }
+
+  .art__people {
+    max-width: 44%;
+  }
+
+  .dress__body {
+    flex-direction: column;
+  }
+
+  .dress__left {
+    margin-bottom: 20px;
+  }
+
+  .dress__left .card {
+    max-width: unset;
+  }
+
+  .dress__image {
+    margin-top: 20px;
+  }
+
+  .dress__right {
+    padding-left: 0;
   }
 }
 
