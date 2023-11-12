@@ -3324,36 +3324,6 @@ body.lock {
     flex-direction: column;
   }
 
-  .system__plane {
-    margin-bottom: 200px;
-  }
-
-  .system__bus {
-    align-self: center;
-  }
-
-  .plane-system__bg {
-    left: 65%;
-  }
-
-  .plane-system__text {
-    font-size: 0.875rem;
-    max-width: 300px;
-  }
-
-  .bus-system__bg {
-    left: 80%;
-  }
-
-  .bus-system__text {
-    font-size: 0.875rem;
-    max-width: 300px;
-  }
-
-  .bus-system__name {
-    font-size: 3.75rem;
-  }
-
   .welcome__phone {
     transform: translate(-60%, 0);
     padding-top: 70px;
@@ -3474,8 +3444,38 @@ body.lock {
 }
 
 @media (max-width: 480px) {
+  .system__plane {
+    margin-bottom: 200px;
+  }
+
+  .system__bus {
+    align-self: center;
+  }
+
   .system__white {
     max-width: 298px;
+  }
+
+  .plane-system__bg {
+    left: 65%;
+  }
+
+  .plane-system__text {
+    font-size: 0.875rem;
+    max-width: 300px;
+  }
+
+  .bus-system__bg {
+    left: 80%;
+  }
+
+  .bus-system__text {
+    font-size: 0.875rem;
+    max-width: 300px;
+  }
+
+  .bus-system__name {
+    font-size: 3.75rem;
   }
 
   .white-system__title {
