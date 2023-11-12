@@ -3943,6 +3943,10 @@ body.lock {
     padding: 0 10px;
   }
 
+  .art__block_horisontal .art__card.active {
+    transform: translate(0, 0);
+  }
+
   .art__block_horisontal .art__card {
     transform: translate(0, 0);
     margin-right: 0;
