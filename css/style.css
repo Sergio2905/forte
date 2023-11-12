@@ -995,9 +995,9 @@ body.lock {
   z-index: -1;
   position: absolute;
   top: 47%;
-  left: 38%;
+  left: -65%;
   height: 220%;
-  transform: translate(-50%, -50%);
+  transform: translate(0, -50%);
 }
 
 .plane-system__bg img {
@@ -1009,6 +1009,7 @@ body.lock {
   font-size: 1.125rem;
   font-weight: 300;
   max-width: 360px;
+  width: 100%;
 }
 
 .plane-system__text span {
@@ -1026,9 +1027,9 @@ body.lock {
   z-index: -1;
   position: absolute;
   top: 52%;
-  left: 42%;
+  left: -55%;
   height: 190%;
-  transform: translate(-50%, -50%);
+  transform: translate(0, -50%);
 }
 
 .bus-system__bg img {
@@ -1040,6 +1041,7 @@ body.lock {
   font-size: 1.125rem;
   font-weight: 300;
   max-width: 430px;
+  width: 100%;
 }
 
 .bus-system__name {
@@ -3457,7 +3459,7 @@ body.lock {
   }
 
   .plane-system__bg {
-    left: 65%;
+    left: -57%;
   }
 
   .plane-system__text {
@@ -3466,7 +3468,7 @@ body.lock {
   }
 
   .bus-system__bg {
-    left: 80%;
+    left: -67%;
   }
 
   .bus-system__text {
