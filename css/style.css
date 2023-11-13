@@ -3749,6 +3749,10 @@ body.lock {
     height: 600px;
   }
 
+  .welcome__left.active {
+    transform: translate(0, 0);
+  }
+
   .welcome__left {
     transform: translate(0, 0);
   }
@@ -3789,7 +3793,8 @@ body.lock {
   }
 
   .welcome__phone {
-    transform: translate(-20%, 0);
+    position: relative;
+    left: -100px;
     padding-top: 30px;
   }
 
