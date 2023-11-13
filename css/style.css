@@ -138,6 +138,20 @@ h6 {
   --bg: url("../img/loading.gif") 50% no-repeat;
 }
 
+html {
+  scrollbar-width: thin;
+  scrollbar-color: #cd376c #fff;
+}
+
+html::-webkit-scrollbar {
+  width: 2px;
+  height: 100%;
+}
+
+html::-webkit-scrollbar-thumb {
+  background: #cd376c;
+}
+
 body {
   font-family: "Cignika";
   font-weight: 400;
