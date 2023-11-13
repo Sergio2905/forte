@@ -1656,6 +1656,10 @@ body.lock {
   padding-right: 80px;
 }
 
+.app__left .card {
+  max-width: 440px;
+}
+
 .app__man {
   position: relative;
   z-index: 1;
@@ -1749,6 +1753,11 @@ body.lock {
   opacity: 1;
 }
 
+.app__phone.active .app__people {
+  left: 150px;
+  bottom: 460px;
+}
+
 .app__phone-image {
   max-width: 306px;
   width: 100%;
@@ -1765,12 +1774,13 @@ body.lock {
 
 .app__people {
   position: absolute;
-  top: 0;
-  right: 0;
+  left: -50%;
+  bottom: -50%;
   width: 1030px;
   height: 770px;
   z-index: 2;
-  animation: flyingPeople 3s ease-out infinite;
+  transition: all 1s ease;
+  animation: upAndDown 2s ease-in-out infinite;
 }
 
 .app__people img {
@@ -3437,6 +3447,11 @@ body.lock {
     font-size: calc(1.25rem + 30 * (100vw - 20rem) / 1600);
   }
 
+  .app__phone.active .app__people {
+    left: calc(125px + 25 * (100vw - 320px) / 1600);
+    bottom: calc(380px + 80 * (100vw - 768px) / 1152);
+  }
+
   .app__phone-image {
     max-width: calc(150px + 156 * (100vw - 320px) / 1600);
   }
@@ -3845,6 +3860,16 @@ body.lock {
 
   .app__phone {
     margin: 20px 0;
+  }
+
+  .app__people {
+    left: unset;
+    bottom: unset;
+    top: 0;
+    right: 0;
+    width: calc(250px + 780 * (100vw - 320px) / 1600);
+    height: calc(180px + 590 * (100vw - 320px) / 1600);
+    animation: flyingPeople 3s ease-out infinite;
   }
 
   .education__grid {
