@@ -1725,10 +1725,24 @@ body.lock {
   align-items: center;
 }
 
+.app__phone.active .card {
+  opacity: 1;
+  transform: translate(0, 0);
+}
+
+.app__phone.active .app__phone-image {
+  top: 0;
+  opacity: 1;
+}
+
 .app__phone-image {
   max-width: 306px;
   width: 100%;
   animation: vibro 2s linear infinite;
+  transition: all 0.5s ease;
+  opacity: 0;
+  position: relative;
+  top: 30px;
 }
 
 .app__phone-image img {
@@ -3324,9 +3338,9 @@ body.lock {
   }
 
   .welcome__dialog {
-    padding-top: calc(15px + 20 * (100vw - 320px) / 1600);
+    padding-top: calc(20px + 15 * (100vw - 320px) / 1600);
     padding-bottom: calc(60px + 15 * (100vw - 320px) / 1600);
-    padding-inline: calc(15px + 35 * (100vw - 320px) / 1600);
+    padding-inline: calc(20px + 30 * (100vw - 320px) / 1600);
   }
 
   .welcome__hi {
