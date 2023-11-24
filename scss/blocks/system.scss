@@ -1,0 +1,441 @@
+.system {
+    padding-top: 100px;
+    background: #56BFF3;
+
+    @media (max-width: $layout) {
+        padding-top: calc(50px + (100 - 50) * ((100vw - 320px) / ($canvas - 320)));
+    }
+
+    &__body {
+        .system__plane {
+            // transform: translate(-100vw, 0);
+            left: -100vw;
+            transition: all 1.5s ease;
+        }
+
+        .system__bus {
+            transform: translate(-100vw, 0);
+        }
+
+        &.active {
+            .system__plane {
+                // transform: translate(0, 0);
+                left: 0;
+                animation: airplane 3s ease infinite;
+                animation-delay: 1.5s;
+            }
+
+            .system__bus {
+                animation: bus 6s ease infinite;
+            }
+        }
+    }
+
+    &__top {
+        position: relative;
+        padding-bottom: 130px;
+    }
+
+    &__container {
+        position: relative;
+        z-index: 1;
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__bg {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+
+        img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+
+    &__title {
+        color: var(--white);
+        font-family: "DS Pixel";
+        font-size: rem(80);
+        text-transform: uppercase;
+        margin-bottom: 20px;
+        text-shadow: 6px 5px 0 rgba($color: #0E3759, $alpha: 1.0);
+        opacity: 0;
+        transform: translate(0, 30px);
+        transition: all .5s ease;
+
+        &.active {
+            opacity: 1;
+            transform: translate(0, 0);
+        }
+
+        @media (max-width: $layout) {
+            font-size: calc(rem(30) + (80 - 30) * ((100vw - rem(320)) / ($canvas - 320)));
+            text-shadow: calc(3px + (6 - 3) * ((100vw - 320px) / ($canvas - 320))) calc(2px + (5 - 2) * ((100vw - 320px) / ($canvas - 320))) 0 rgba($color: #0E3759, $alpha: 1.0);
+        }
+    }
+
+    &__plane {
+        margin-bottom: 250px;
+        align-self: flex-end;
+
+        @media (max-width: 480px) {
+            margin-bottom: 200px;
+        }
+    }
+
+    &__bus {
+        align-self: flex-end;
+
+        @media (max-width: 480px) {
+            align-self: center;
+        }
+    }
+
+    &__bottom {
+        position: relative;
+
+        @media (max-width: $tablet) {
+            padding-top: 50px;
+        }
+    }
+
+    &__block {
+        display: flex;
+        justify-content: space-between;
+
+        @media (max-width: $tablet) {
+            flex-direction: column-reverse;
+            align-items: center;
+        }
+    }
+
+    &__left {
+        width: fit-content;
+        position: relative;
+        max-height: 700px;
+
+        @media (max-width: $tablet) {
+            max-height: unset;
+            padding: 100px 0;
+        }
+    }
+
+    &__white {
+        position: absolute;
+        bottom: 0;
+        max-width: 370px;
+        width: 100%;
+        transform: translate(0, -220px);
+        opacity: 0;
+        transition: all .5s ease;
+
+        &.active {
+            opacity: 1;
+            transform: translate(0, -250px);
+
+            @media (max-width: $tablet) {
+                transform: translate(0, 0);
+            }
+        }
+
+        @media (max-width: $tablet) {
+            transform: translate(0, 0);
+            position: relative;
+        }
+
+        @media (max-width: 480px) {
+            max-width: 298px;
+        }
+    }
+
+    &__right {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    &__blue {
+        padding: 20px;
+        max-width: 530px;
+        transform: translate(20px, 30px);
+        opacity: 0;
+        transition: all .5s ease;
+
+        &.active {
+            opacity: 1;
+            transform: translate(20px, 0);
+
+            @media (max-width: $tablet) {
+                transform: translate(0, 0);
+            }
+        }
+
+        @media (max-width: $tablet) {
+            transform: translate(0, 0);
+        }
+    }
+}
+
+.plane-system {
+    position: relative;
+    width: fit-content;
+
+    &__bg {
+        z-index: -1;
+        position: absolute;
+        top: 47%;
+        left: -65%;
+        height: 220%;
+        transform: translate(0, -50%);
+
+        @media (max-width: 480px) {
+            left: -57%;
+        }
+
+        img {
+            height: 100%;
+        }
+    }
+
+    &__text {
+        color: #0E3759;
+        font-size: rem(18);
+        font-weight: 300;
+        max-width: 360px;
+        width: 100%;
+
+        @media (max-width: 480px) {
+            font-size: rem(14);
+            max-width: 300px;
+        }
+
+        span {
+            font-family: "Minecraft";
+            font-weight: 400;
+        }
+    }
+}
+
+.bus-system {
+    position: relative;
+    width: fit-content;
+
+    &__bg {
+        z-index: -1;
+        position: absolute;
+        top: 52%;
+        left: -55%;
+        height: 190%;
+        transform: translate(0, -50%);
+
+        @media (max-width: 480px) {
+            left: -67%;
+        }
+
+        img {
+            height: 100%;
+        }
+    }
+
+    &__text {
+        color: #0E3759;
+        font-size: rem(18);
+        font-weight: 300;
+        max-width: 430px;
+        width: 100%;
+
+        @media (max-width: 480px) {
+            font-size: rem(14);
+            max-width: 300px;
+        }
+    }
+
+    &__info {}
+
+    &__name {
+        color: var(--blue);
+        font-family: "DS Pixel";
+        font-size: rem(90);
+        text-transform: uppercase;
+
+        @media (max-width: 480px) {
+            font-size: rem(60);
+        }
+    }
+}
+
+.white-system {
+    position: relative;
+
+    &__bg {
+        position: absolute;
+        top: -7%;
+        left: -78%;
+        height: 121%;
+
+        img {
+            height: 100%;
+        }
+    }
+
+    &__body {
+        padding: 30px 20px;
+        background: rgba(255, 255, 255, 0.80);
+        position: relative;
+        z-index: 1;
+    }
+
+    &__title {
+        color: #0E3759;
+        font-family: "Minecraft";
+        font-size: rem(30);
+        margin-bottom: 20px;
+
+        @media (max-width: 480px) {
+            font-size: rem(18);
+        }
+    }
+
+    &__text {
+        margin-bottom: 20px;
+        color: #0E3759;
+        font-size: rem(18);
+        font-weight: 300;
+        line-height: 1.5;
+
+        @media (max-width: 480px) {
+            font-size: rem(14);
+        }
+    }
+
+    &__list {
+        counter-reset: num-list;
+    }
+
+    &__item {
+        position: relative;
+        color: #0E3759;
+        font-size: rem(18);
+        font-weight: 300;
+        padding-left: 40px;
+
+        @media (max-width: 480px) {
+            font-size: rem(14);
+            padding-left: 30px;
+        }
+
+        &:not(:last-child) {
+            margin-bottom: 10px;
+        }
+
+        &::before {
+            position: absolute;
+            top: 0;
+            left: 0;
+            counter-increment: num-list;
+            content: counter(num-list) " ";
+            color: #0E3759;
+            font-family: "Minecraft";
+            font-size: rem(18);
+            width: 30px;
+            height: 30px;
+            background: var(--white);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            @media (max-width: 480px) {
+                font-size: rem(14);
+                width: 20px;
+                height: 20px;
+            }
+        }
+    }
+}
+
+.blue-system {
+    background: url('../img/system/text-bg.webp') 0 0 / 100% 100% no-repeat;
+
+    &__title {
+        color: #0E3759;
+        font-family: "Minecraft";
+        font-size: rem(18);
+        margin-bottom: 10px;
+
+        @media (max-width: $tablet) {
+            font-size: calc(rem(14) + (18 - 14) * ((100vw - rem(320)) / (992 - 320)));
+        }
+    }
+
+    &__text {
+        font-weight: 300;
+        color: #0E3759;
+        margin-bottom: 10px;
+
+        @media (max-width: $tablet) {
+            font-size: calc(rem(14) + (16 - 14) * ((100vw - rem(320)) / (992 - 320)));
+        }
+
+        p {
+            &:not(:last-child) {
+                margin-bottom: 10px;
+            }
+        }
+
+        span {
+            font-weight: 700;
+        }
+    }
+
+    &__footer {
+        color: #0E3759;
+        font-family: "Minecraft";
+        font-size: rem(14);
+        line-height: 1.5;
+
+        @media (max-width: $tablet) {
+            font-size: calc(rem(12) + (14 - 12) * ((100vw - rem(320)) / (992 - 320)));
+        }
+    }
+}
+
+@keyframes bus {
+    0% {
+        transform: translate(-100vw, 0);
+    }
+
+    30% {
+        transform: translate(0, 0);
+    }
+
+    70% {
+        transform: translate(0, 0);
+    }
+
+    100% {
+        transform: translate(100vw, 0);
+    }
+}
+
+@keyframes airplane {
+    0% {
+        transform: translate(0, 0);
+    }
+
+    50% {
+        transform: translate(0, 15px);
+    }
+
+    100% {
+        transform: translate(0, 0);
+    }
+}

@@ -1,0 +1,271 @@
+.app {
+    position: relative;
+    padding: 100px 0;
+
+    @media (max-width: $layout) {
+        padding: calc(50px + (100 - 50) * ((100vw - 320px) / ($canvas - 320))) 0;
+    }
+
+    &__bg {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+
+        img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+
+    &__body {}
+
+    &__title {
+        position: relative;
+        z-index: 1;
+        text-align: center;
+        color: var(--white);
+        font-family: "DS Pixel";
+        font-size: rem(80);
+        font-weight: 400;
+        text-transform: uppercase;
+        text-shadow: 6px 5px 0 rgba($color: #1B526F, $alpha: 1.0);
+        margin-bottom: 70px;
+        opacity: 0;
+        transform: translate(0, 30px);
+        transition: all .5s ease;
+
+        &.active {
+            opacity: 1;
+            transform: translate(0, 0);
+        }
+
+        @media (max-width: $layout) {
+            font-size: calc(rem(30) + (80 - 30) * ((100vw - rem(320)) / ($canvas - 320)));
+            margin-bottom: calc(30px + (70 - 30) * ((100vw - 320px) / ($canvas - 320)));
+            text-shadow: calc(3px + (6 - 3) * ((100vw - 320px) / ($canvas - 320))) calc(2px + (5 - 2) * ((100vw - 320px) / ($canvas - 320))) 0 rgba($color: #1B526F, $alpha: 1.0);
+        }
+    }
+
+    &__content {
+        display: flex;
+
+        @media (max-width: 768px) {
+            flex-direction: column;
+        }
+    }
+
+    &__left {
+        flex: 1 1 50%;
+        padding-right: 80px;
+
+        @media (max-width: $layout) {
+            padding-right: calc(10px + (80 - 10) * ((100vw - 320px) / ($canvas - 320)));
+        }
+
+        @media (max-width: 768px) {
+            margin-bottom: 20px;
+            padding-right: 0;
+        }
+
+        .card {
+            max-width: 440px;
+        }
+    }
+
+    &__man {
+        position: relative;
+        z-index: 1;
+        max-width: 370px;
+        width: 100%;
+        align-self: flex-end;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        flex: 1 1 auto;
+
+        @media (max-width: 768px) {
+            margin-bottom: 20px;
+        }
+    }
+
+    &__image {
+        max-width: 360px;
+        width: 100%;
+        margin-top: -50px;
+        position: relative;
+        z-index: 2;
+
+        @media (max-width: $layout) {
+            max-width: calc(250px + (360 - 200) * ((100vw - 320px) / ($canvas - 320)));
+            margin-top: calc(-35px + (-50 - -35) * ((100vw - 320px) / ($canvas - 320)));
+        }
+
+        img {
+            width: 100%;
+        }
+    }
+
+    &__label {
+        color: #1B526F;
+        font-family: "DS Pixel";
+        font-size: rem(50);
+        text-transform: uppercase;
+        text-shadow: 6px 5px 0 rgba($color: #CD376C, $alpha: 1.0);
+        position: absolute;
+        top: 100px;
+        left: 0;
+        transform: translate(-100px, 0);
+
+        @media (max-width: $layout) {
+            transform: translate(calc(10px + (-100 - 10) * ((100vw - 320px) / ($canvas - 320))), 0);
+            font-size: calc(rem(20) + (50 - 20) * ((100vw - rem(320)) / ($canvas - 320)));
+        }
+    }
+
+    &__card {
+        position: relative;
+        z-index: 1;
+        opacity: 0;
+        transform: translate(0, 30px);
+        transition: all .5s ease;
+
+        &.active {
+            opacity: 1;
+            transform: translate(0, 0);
+        }
+
+        &_left {
+            max-width: 420px;
+            width: 100%;
+            margin-bottom: 20px;
+        }
+
+        &_right {
+            max-width: 500px;
+            width: 100%;
+            align-self: flex-end;
+        }
+
+        &_mini {
+            max-width: 340px;
+            align-self: flex-end;
+        }
+    }
+
+    &__right {
+        flex: 1 1 50%;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        padding-top: 570px;
+
+        @media (max-width: 768px) {
+            padding-top: 0;
+        }
+    }
+
+    &__phone {
+        max-width: 440px;
+        margin: 300px 0 20px;
+        position: relative;
+        z-index: 1;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        &.active {
+            .card {
+                opacity: 1;
+                transform: translate(0, 0);
+            }
+
+            .app__phone-image {
+                top: 0;
+                opacity: 1;
+            }
+
+            .app__people {
+                left: 150px;
+                bottom: 460px;
+
+                @media (max-width: $layout) {
+                    left: calc(125px + (150 - 125) * ((100vw - 320px) / ($canvas - 320)));
+                    bottom: calc(380px + (460 - 380) * ((100vw - 768px) / ($canvas - 768)));
+                }
+            }
+        }
+
+        @media (max-width: 768px) {
+            margin: 20px 0;
+        }
+    }
+
+    &__phone-image {
+        max-width: 306px;
+        width: 100%;
+        animation: vibro 2s linear infinite;
+        transition: all .5s ease;
+        opacity: 0;
+        position: relative;
+        top: 30px;
+
+        @media (max-width: $layout) {
+            max-width: calc(150px + (306 - 150) * ((100vw - 320px) / ($canvas - 320)));
+        }
+
+        img {
+            width: 100%;
+        }
+    }
+
+    &__people {
+        position: absolute;
+        left: -50%;
+        bottom: -50%;
+        width: 1030px;
+        height: 770px;
+        z-index: 2;
+        transition: all 1s ease;
+        animation: upAndDown 2s ease-in-out infinite;
+
+        @media (max-width: $layout) {
+            width: calc(250px + (1030 - 250) * ((100vw - 320px) / ($canvas - 320)));
+            height: calc(180px + (770 - 180) * ((100vw - 320px) / ($canvas - 320)));
+        }
+
+        @media (max-width: 768px) {
+            left: unset;
+            bottom: unset;
+            top: 0;
+            right: 0;
+            width: calc(250px + (1030 - 250) * ((100vw - 320px) / ($canvas - 320)));
+            height: calc(180px + (770 - 180) * ((100vw - 320px) / ($canvas - 320)));
+            animation: flyingPeople 3s ease-out infinite;
+        }
+
+        img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+        }
+    }
+}
+
+@keyframes flyingPeople {
+    0% {
+        transform: translate(-100vw, 100vh);
+    }
+
+    100% {
+        transform: translate(100vw, -100vh);
+    }
+}

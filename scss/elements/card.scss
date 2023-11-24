@@ -1,0 +1,252 @@
+.card {
+    padding: 30px;
+    border-radius: 10px;
+    border: 2px solid rgba(255, 255, 255, 0.80);
+    background: rgba(27, 82, 111, 0.90);
+
+    @media (max-width: $layout) {
+        padding: calc(15px + (30 - 15) * ((100vw - 320px) / ($canvas - 320)));
+    }
+
+    &__main-title {
+        color: var(--white);
+        font-family: "DS Pixel";
+        font-size: rem(80);
+        text-transform: uppercase;
+        text-align: center;
+        margin-bottom: 20px;
+        text-shadow: 6px 5px 0 rgba($color: #CD376C, $alpha: 1.0);
+
+        @media (max-width: $layout) {
+            font-size: calc(rem(30) + (80 - 30) * ((100vw - rem(320)) / ($canvas - 320)));
+            text-shadow: calc(3px + (6 - 3) * ((100vw - 320px) / ($canvas - 320))) calc(2px + (5 - 2) * ((100vw - 320px) / ($canvas - 320))) 0 rgba($color: #CD376C, $alpha: 1.0);
+        }
+    }
+
+    &__title {
+        color: var(--blue);
+        font-family: "Minecraft";
+        font-size: rem(18);
+        margin-bottom: 20px;
+
+        @media (max-width: $layout) {
+            font-size: calc(rem(14) + (18 - 14) * ((100vw - rem(320)) / ($canvas - 320)));
+            margin-bottom: calc(10px + (20 - 10) * ((100vw - 320px) / ($canvas - 320)));
+        }
+    }
+
+    &__subtitle {
+        color: var(--white);
+        font-family: "Minecraft";
+        font-size: rem(18);
+        margin-bottom: 20px;
+        margin-top: -10px;
+
+        @media (max-width: $layout) {
+            font-size: calc(rem(14) + (18 - 14) * ((100vw - rem(320)) / ($canvas - 320)));
+            margin-bottom: calc(10px + (20 - 10) * ((100vw - 320px) / ($canvas - 320)));
+        }
+    }
+
+    &__text {
+        font-weight: 300;
+        color: var(--white);
+        font-size: rem(18);
+        line-height: 1.5;
+
+        @media (max-width: $layout) {
+            font-size: calc(rem(12) + (18 - 12) * ((100vw - rem(320)) / ($canvas - 320)));
+        }
+
+        &:not(:last-child) {
+            margin-bottom: 20px;
+
+            @media (max-width: $layout) {
+                margin-bottom: calc(10px + (20 - 10) * ((100vw - 320px) / ($canvas - 320)));
+            }
+        }
+
+        p {
+            &:not(:last-child) {
+                margin-bottom: 20px;
+
+                @media (max-width: $layout) {
+                    margin-bottom: calc(10px + (20 - 10) * ((100vw - 320px) / ($canvas - 320)));
+                }
+            }
+        }
+    }
+
+    &__list {
+        &:not(:last-child) {
+            margin-bottom: 20px;
+
+            @media (max-width: $layout) {
+                margin-bottom: calc(10px + (20 - 10) * ((100vw - 320px) / ($canvas - 320)));
+            }
+        }
+    }
+
+    &__item {
+        position: relative;
+        color: var(--white);
+        font-weight: 300;
+        font-size: rem(18);
+        padding-left: 15px;
+
+        @media (max-width: $layout) {
+            font-size: calc(rem(12) + (18 - 12) * ((100vw - rem(320)) / ($canvas - 320)));
+        }
+
+        &::before {
+            content: "";
+            position: absolute;
+            background: var(--blue);
+            width: 24px;
+            height: 24px;
+            top: 0;
+            left: -10px;
+            background: url('../img/icons/list.svg') center / contain no-repeat;
+        }
+
+        &:not(:last-child) {
+            margin-bottom: 5px;
+        }
+    }
+
+    &__link {
+        color: var(--white);
+        font-family: "Minecraft";
+        font-size: rem(14);
+        transition: all .5s ease;
+
+        @media (max-width: $layout) {
+            font-size: calc(rem(10) + (14 - 10) * ((100vw - rem(320)) / ($canvas - 320)));
+        }
+
+        @media (any-hover: hover) {
+            &:hover {
+                color: var(--blue);
+            }
+        }
+    }
+
+    &__sign {
+        color: var(--blue);
+        font-family: "Minecraft";
+        font-size: rem(18);
+
+        @media (max-width: $layout) {
+            font-size: calc(rem(12) + (18 - 12) * ((100vw - rem(320)) / ($canvas - 320)));
+        }
+    }
+
+    &__icons {
+        display: flex;
+        align-items: center;
+    }
+
+    &__icon {
+        max-width: 50px;
+        width: 100%;
+        animation: heartPulse 1s ease 3s infinite;
+
+        &:not(:last-child) {
+            margin-right: 5px;
+        }
+
+        img {
+            width: 100%;
+        }
+    }
+
+    &__outro {
+        color: var(--blue);
+        font-family: "Minecraft";
+        font-size: rem(18);
+
+        @media (max-width: $layout) {
+            font-size: calc(rem(14) + (18 - 14) * ((100vw - rem(320)) / ($canvas - 320)));
+        }
+    }
+
+    &__grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 20px;
+
+        @media (max-width: 768px) {
+            grid-template-columns: 1fr;
+        }
+    }
+
+    &__section {
+        &:not(:last-child) {
+            border-right: 2px solid rgba($color: #fff, $alpha: .2);
+            padding-right: 20px;
+
+            @media (max-width: 768px) {
+                padding-right: unset;
+                padding-bottom: 20px;
+                border-right: none;
+                border-bottom: 2px solid rgba($color: #fff, $alpha: .2);
+            }
+        }
+    }
+
+    &__footer {
+        color: var(--white);
+        font-size: rem(18);
+        font-weight: 300;
+
+        @media (max-width: $layout) {
+            font-size: calc(rem(12) + (18 - 12) * ((100vw - rem(320)) / ($canvas - 320)));
+        }
+
+        span {
+            color: var(--blue);
+            font-family: "Minecraft";
+        }
+    }
+
+    &__image {
+        width: 120px;
+        height: 120px;
+        min-width: 120px;
+        position: relative;
+        margin-bottom: 20px;
+
+        @media (max-width: $layout) {
+            width: calc(60px + (120 - 60) * ((100vw - 320px) / ($canvas - 320)));
+            min-width: calc(60px + (120 - 60) * ((100vw - 320px) / ($canvas - 320)));
+            height: calc(60px + (120 - 60) * ((100vw - 320px) / ($canvas - 320)));
+        }
+
+        img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+        }
+    }
+}
+
+@keyframes heartPulse {
+    0% {
+        transform: scale(1);
+    }
+
+    30% {
+        transform: scale(1.05);
+    }
+
+    60% {
+        transform: scale(1);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}

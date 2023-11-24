@@ -1,0 +1,273 @@
+.welcome {
+
+    &__main {
+        position: relative;
+    }
+
+    &__bg {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+
+        img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+
+    &__body {
+        padding: 100px 0;
+
+        @media (max-width: $layout) {
+            padding: calc(50px + (100 - 50) * ((100vw - 320px) / ($canvas - 320))) 0;
+        }
+    }
+
+    &__container {}
+
+    &__content {
+        position: relative;
+        height: 600px;
+
+        @media (max-width: $layout) {
+            height: calc(350px + (600 - 350) * ((100vw - 320px) / ($canvas - 320)));
+        }
+
+        @media (max-width: $tablet) {
+            height: 600px;
+        }
+    }
+
+    &__pretitle {
+        position: relative;
+        color: var(--white);
+        font-family: "Minecraft";
+        font-size: rem(26);
+        font-weight: 400;
+        z-index: 1;
+        text-align: center;
+        margin-bottom: 20px;
+        transform: translate(0, 30px);
+        opacity: 0;
+        transition: all .8s ease;
+
+        &.active {
+            transform: translate(0, 0);
+            opacity: 1;
+        }
+
+        @media (max-width: $layout) {
+            font-size: calc(rem(16) + (26 - 16) * ((100vw - rem(320)) / ($canvas - 320)));
+            margin-bottom: calc(10px + (20 - 10) * ((100vw - 320px) / ($canvas - 320)));
+        }
+    }
+
+    &__title {
+        position: relative;
+        z-index: 1;
+        text-align: center;
+        color: #CD376C;
+        font-family: "DS Pixel";
+        font-size: rem(80);
+        font-weight: 400;
+        text-transform: uppercase;
+        text-shadow: -6px -5px 0 rgba($color: #fff, $alpha: 1.0);
+        margin-bottom: 70px;
+        transform: translate(0, 30px);
+        opacity: 0;
+        transition: all .5s ease .1s;
+
+        &.active {
+            transform: translate(0, 0);
+            opacity: 1;
+        }
+
+        @media (max-width: $layout) {
+            font-size: calc(rem(30) + (80 - 30) * ((100vw - rem(320)) / ($canvas - 320)));
+            margin-bottom: calc(30px + (70 - 30) * ((100vw - 320px) / ($canvas - 320)));
+            text-shadow: calc(-3px + (-6 - -3) * ((100vw - 320px) / ($canvas - 320))) calc(-2px + (-5 - -2) * ((100vw - 320px) / ($canvas - 320))) 0 rgba($color: #fff, $alpha: 1.0);
+        }
+    }
+
+    &__left {
+        position: absolute;
+        top: 0;
+        left: 0;
+        transform: translate(-20%, 30px);
+        z-index: 1;
+        max-width: 874px;
+        width: 100%;
+        opacity: 0;
+        transition: all .5s ease;
+
+        &.active {
+            transform: translate(-20%, 0);
+            opacity: 1;
+
+            @media (max-width: $tablet) {
+                transform: translate(0, 0);
+            }
+        }
+
+        @media (max-width: $tablet) {
+            transform: translate(0, 0);
+        }
+    }
+
+    &__dialog {
+        background: url('../img/welcome/text-cloud.webp') 0 0 / 100% 100% no-repeat;
+        padding: 35px 50px 75px;
+        max-width: 620px;
+        width: 100%;
+        position: absolute;
+        top: 5%;
+        right: 0;
+
+        @media (max-width: $layout) {
+            padding-top: calc(20px + (35 - 20) * ((100vw - 320px) / ($canvas - 320)));
+            padding-bottom: calc(60px + (75 - 60) * ((100vw - 320px) / ($canvas - 320)));
+            padding-inline: calc(20px + (50 - 20) * ((100vw - 320px) / ($canvas - 320)));
+        }
+    }
+
+    &__hi {
+        color: #CD376C;
+        font-family: "Minecraft";
+        font-size: rem(24);
+        font-weight: 400;
+        margin-bottom: 20px;
+
+        @media (max-width: $layout) {
+            font-size: calc(rem(16) + (24 - 16) * ((100vw - rem(320)) / ($canvas - 320)));
+        }
+    }
+
+    &__text {
+        color: #1B526F;
+        font-family: "Cignika";
+        font-size: rem(20);
+        font-weight: 400;
+
+        @media (max-width: $layout) {
+            font-size: calc(rem(14) + (20 - 14) * ((100vw - rem(320)) / ($canvas - 320)));
+        }
+    }
+
+    &__right {
+        position: relative;
+        z-index: 1;
+        display: flex;
+        align-items: flex-end;
+        position: absolute;
+        right: 0;
+        bottom: 0;
+
+        transform: translate(0, 30px);
+        opacity: 0;
+        transition: all .5s ease .1s;
+
+        &.active {
+            transform: translate(0, 0);
+            opacity: 1;
+        }
+
+        @media (max-width: $tablet) {
+            flex-direction: column-reverse;
+        }
+    }
+
+    &__phone {
+        max-width: 450px;
+        width: 100%;
+        animation: vibro 2s linear infinite;
+
+        @media (max-width: $layout) {
+            max-width: calc(200px + (450 - 200) * ((100vw - 320px) / ($canvas - 320)));
+        }
+
+        @media (max-width: 768px) {
+            position: relative;
+            left: -100px;
+            padding-top: 30px;
+        }
+
+        @media (max-width: 576px) {
+            transform: translate(-60%, 0);
+            padding-top: 70px;
+        }
+
+        img {
+            width: 100%;
+        }
+    }
+
+    &__photo {
+        max-width: 372px;
+        width: 100%;
+
+        @media (max-width: $layout) {
+            max-width: calc(150px + (372 - 150) * ((100vw - 320px) / ($canvas - 320)));
+        }
+
+        img {
+            width: 100%;
+        }
+    }
+
+    &__desc {
+        color: var(--white);
+        border-radius: 10px;
+        border: 2px solid rgba(255, 255, 255, 0.80);
+        background: rgba(27, 82, 111, 0.80);
+        font-family: "Cignika";
+        font-size: rem(18);
+        font-weight: 300;
+        padding: 30px;
+        max-width: 400px;
+        width: 100%;
+        transform: translate(20px, 50px);
+
+        @media (max-width: $layout) {
+            font-size: calc(rem(12) + (18 - 12) * ((100vw - rem(320)) / ($canvas - 320)));
+            padding: calc(10px + (30 - 10) * ((100vw - 320px) / ($canvas - 320)));
+        }
+
+        @media (max-width: $tablet) {
+            max-width: unset;
+            transform: translate(0, -30px);
+        }
+
+        p {
+            &:not(:last-child) {
+                margin-bottom: 20px;
+
+                @media (max-width: $layout) {
+                    margin-bottom: calc(10px + (20 - 10) * ((100vw - 320px) / ($canvas - 320)));
+                }
+            }
+
+            &:last-child {
+                font-family: "Minecraft";
+                font-weight: 400;
+                margin-top: -20px;
+
+                @media (max-width: $layout) {
+                    margin-top: calc(-10px + (-20 - -10) * ((100vw - 320px) / ($canvas - 320)));
+                }
+            }
+        }
+    }
+
+    &__bottom {
+
+        img {
+            width: 100%;
+        }
+    }
+}

@@ -1,0 +1,140 @@
+.treasure {
+    position: relative;
+
+    &__bg {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+
+        img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: top;
+        }
+
+        picture {
+            &:not(:first-child) {
+                img {
+                    animation: blink 2s ease infinite;
+                }
+            }
+        }
+
+        picture {
+            &:nth-child(2) {
+                img {
+                    animation-delay: .2s;
+                }
+            }
+        }
+
+        picture {
+            &:nth-child(3) {
+                img {
+                    animation-delay: 1.4s;
+                }
+            }
+        }
+
+        picture {
+            &:nth-child(4) {
+                img {
+                    animation-delay: .6s;
+                }
+            }
+        }
+
+        picture {
+            &:nth-child(5) {
+                img {
+                    animation-delay: 1.8s;
+                }
+            }
+        }
+
+        picture {
+            &:nth-child(6) {
+                img {
+                    animation-delay: 1s;
+                }
+            }
+        }
+    }
+
+    &__container {}
+
+    &__body {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        max-width: 600px;
+        height: 1240px;
+        width: 100%;
+        z-index: 1;
+        padding: 100px 0 60px;
+
+        @media (max-width: $layout) {
+            padding: calc(20px + (100 - 20) * ((100vw - 320px) / ($canvas - 320))) 0 60px;
+            height: calc(209px + (1240 - 209) * ((100vw - 320px) / ($canvas - 320)));
+        }
+    }
+
+    &__title {
+        color: var(--white);
+        font-family: "DS Pixel";
+        font-size: rem(50);
+        text-transform: uppercase;
+        text-align: center;
+        margin-bottom: 20px;
+        text-shadow: 6px 5px 0 rgba($color: #CD376C, $alpha: 1.0);
+        opacity: 0;
+        transform: translate(0, 30px);
+        transition: all .5s ease;
+
+        &.active {
+            opacity: 1;
+            transform: translate(0, 0);
+        }
+
+        @media (max-width: $layout) {
+            font-size: calc(rem(20) + (50 - 20) * ((100vw - rem(320)) / ($canvas - 320)));
+            text-shadow: calc(3px + (6 - 3) * ((100vw - 320px) / ($canvas - 320))) calc(2px + (5 - 2) * ((100vw - 320px) / ($canvas - 320))) 0 rgba($color: #CD376C, $alpha: 1.0);
+        }
+    }
+
+    &__card {
+        opacity: 0;
+        transform: translate(0, 30px);
+        transition: all .5s ease;
+
+        &.active {
+            opacity: 1;
+            transform: translate(0, 0);
+        }
+    }
+}
+
+@keyframes blink {
+    0% {
+        opacity: 0;
+    }
+
+    20% {
+        opacity: 1;
+    }
+
+    40% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}

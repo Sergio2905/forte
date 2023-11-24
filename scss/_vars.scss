@@ -1,0 +1,14 @@
+// --- Container ---
+$container: 1210;
+$canvas: 1920;
+
+// --- Fonts ---
+$font-family: "Cignika";
+$font-weight: 400;
+
+// --- Breakpoints ---
+$layout: $canvas + px;
+$desktop: 1200px;
+$tablet: 992px;
+$medium: 768px;
+$phone: 480px;

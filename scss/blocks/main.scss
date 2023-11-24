@@ -1,0 +1,336 @@
+.main {
+    position: relative;
+
+    &__bg {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+
+        img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: top;
+        }
+    }
+
+    &__body {
+        position: relative;
+        z-index: 1;
+    }
+
+    &__lang {}
+
+    &__logo {
+        max-width: 220px;
+        position: relative;
+        z-index: 1;
+        margin: 0 auto 40px;
+
+        @media (max-width: $layout) {
+            max-width: calc(130px + (220 - 130) * ((100vw - 320px) / ($canvas - 320)));
+            margin-bottom: calc(30px + (40 - 30) * ((100vw - 320px) / ($canvas - 320)));
+        }
+
+        img {
+            width: 100%;
+        }
+    }
+
+    &__header {
+        position: relative;
+        margin: 0 auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: fit-content;
+        margin-bottom: 117px;
+
+        @media (max-width: $layout) {
+            margin-bottom: calc(20px + (117 - 20) * ((100vw - 320px) / ($canvas - 320)));
+        }
+    }
+
+    &__title {
+        max-width: 800px;
+        width: 100%;
+        animation: blink 3s ease infinite;
+
+        @media (max-width: $layout) {
+            max-width: calc(230px + (800 - 230) * ((100vw - 320px) / ($canvas - 320)));
+        }
+
+        img {
+            width: 100%;
+        }
+    }
+
+    &__icon {
+        max-width: 166px;
+        width: 100%;
+        margin-left: -50px;
+        animation: upAndDown 2s ease-in-out .5s infinite;
+
+        @media (max-width: $layout) {
+            max-width: calc(70px + (166 - 70) * ((100vw - 320px) / ($canvas - 320)));
+            margin-left: calc(-15px + (-50 - -15) * ((100vw - 320px) / ($canvas - 320)));
+        }
+
+        img {
+            width: 100%;
+        }
+    }
+
+    &__text {
+        color: var(--white, #FFF);
+        font-family: "Minecraft";
+        font-size: rem(26);
+        font-weight: 400;
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        padding: 10px 30px;
+        background: url('../img/main/text-bg.webp') 0 0 / 100% 100% no-repeat;
+
+        @media (max-width: $layout) {
+            font-size: calc(rem(12) + (26 - 12) * ((100vw - rem(320)) / ($canvas - 320)));
+            padding-block: calc(3px + (10 - 3) * ((100vw - 320px) / ($canvas - 320)));
+            padding-inline: calc(10px + (30 - 10) * ((100vw - 320px) / ($canvas - 320)));
+        }
+    }
+
+    &__center {
+        display: flex;
+        align-items: flex-end;
+        justify-content: flex-end;
+        position: relative;
+        margin-bottom: -150px;
+
+        @media (max-width: $layout) {
+            margin-bottom: calc(-10px + (-150 - -10) * ((100vw - 320px) / ($canvas - 320)));
+        }
+    }
+
+    &__skater {
+        max-width: 120px;
+        width: 100%;
+        position: absolute;
+        bottom: 0;
+        left: 30%;
+        animation: upAndDown 2s ease-in-out infinite;
+
+        @media (max-width: $layout) {
+            max-width: calc(60px + (120 - 60) * ((100vw - 320px) / ($canvas - 320)));
+        }
+
+        img {
+            width: 100%;
+        }
+    }
+
+    &__bus {
+        max-width: 470px;
+        width: 100%;
+        animation: diagonal 5s ease infinite;
+
+        @media (max-width: $layout) {
+            max-width: calc(170px + (470 - 170) * ((100vw - 320px) / ($canvas - 320)));
+        }
+
+        img {
+            width: 100%;
+        }
+    }
+
+    &__footer {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-end;
+    }
+
+    &__robot {
+        max-width: 520px;
+        width: 100%;
+        transform: translate(-20%, 18%);
+        animation: zoomRobot 1s linear infinite;
+
+        img {
+            width: 100%;
+        }
+    }
+
+    &__phone {
+        max-width: 615px;
+        width: 100%;
+        animation: vibro 2s linear infinite;
+
+        img {
+            width: 100%;
+        }
+    }
+}
+
+.lang {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 23px;
+    margin-top: 30px;
+
+    @media (max-width: $layout) {
+        margin-top: calc(10px + (30 - 10) * ((100vw - 320px) / ($canvas - 320)));
+    }
+
+    &__link {
+        font-family: "DS Pixel";
+        font-size: rem(26);
+        font-weight: 400;
+        color: var(--white);
+
+        @media (max-width: $layout) {
+            font-size: calc(rem(18) + (26 - 18) * ((100vw - rem(320)) / ($canvas - 320)));
+        }
+
+        &_red {
+            text-shadow: 4px 3px 0 rgba($color: #CD376C, $alpha: 1.0);
+        }
+
+        &_blue {
+            text-shadow: 4px 3px 0 rgba($color: #3CB0DF, $alpha: 1.0);
+        }
+
+        &:not(:last-child) {
+            margin-right: 23px;
+        }
+    }
+}
+
+@keyframes upAndDown {
+    0% {
+        transform: translate(0, 0);
+    }
+
+    50% {
+        transform: translate(0, 20px);
+    }
+
+    100% {
+        transform: translate(0, 0);
+    }
+}
+
+@keyframes diagonal {
+    0% {
+        transform: translate(-100vw, 50vh);
+    }
+
+    100% {
+        transform: translate(100vw, -50vh);
+    }
+}
+
+@keyframes blink {
+    0% {
+        opacity: 1;
+    }
+
+    2% {
+        opacity: 0;
+    }
+
+    4% {
+        opacity: 1;
+    }
+
+    6% {
+        opacity: 0;
+    }
+
+    8% {
+        opacity: 1;
+    }
+
+    9% {
+        opacity: 1;
+    }
+
+    30% {
+        opacity: 1;
+    }
+
+    32% {
+        opacity: 0;
+    }
+
+    34% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes vibro {
+    0% {
+        transform: translate(0, 0);
+    }
+
+    2% {
+        transform: translate(-10px, 0);
+    }
+
+    4% {
+        transform: translate(0, 0);
+    }
+
+    6% {
+        transform: translate(-10px, 0);
+    }
+
+    8% {
+        transform: translate(0, 0);
+    }
+
+    10% {
+        transform: translate(-10px, 0);
+    }
+
+    12% {
+        transform: translate(0, 0);
+    }
+
+    14% {
+        transform: translate(-10px, 0);
+    }
+
+    16% {
+        transform: translate(0, 0);
+    }
+
+    100% {
+        transform: translate(0, 0);
+    }
+}
+
+@keyframes zoomRobot {
+    0% {
+        transform: translate(-20%, 18%) scale(1);
+    }
+
+    50% {
+        transform: translate(-20%, 18%) scale(1);
+    }
+
+    51% {
+        transform: translate(-20%, 18%) scale(0.95);
+    }
+
+    100% {
+        transform: translate(-20%, 18%) scale(0.95);
+    }
+}

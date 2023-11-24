@@ -1,0 +1,90 @@
+.tabs {
+    position: relative;
+
+    &__header {
+        width: 100%;
+        margin-bottom: 100px;
+        overflow-x: auto;
+        padding-bottom: 10px;
+        scrollbar-width: none;
+        scrollbar-color: #000 #fff;
+
+        &::-webkit-scrollbar {
+            width: 0;
+            height: 0;
+        }
+
+        @media (max-width: $layout) {
+            margin-bottom: calc(30px + (100 - 30) * ((100vw - 320px) / ($canvas - 320)));
+        }
+    }
+
+    &__scroll {
+        display: flex;
+        min-width: 630px;
+    }
+
+    &__item {
+        flex: 1 1 auto;
+        padding: 50px 10px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        cursor: pointer;
+        transition: all .2s linear;
+        color: $white;
+        font-size: rem(14);
+        font-weight: 500;
+        border-radius: 20px;
+        text-align: center;
+
+        @media (max-width: $layout) {
+            padding: calc(10px + (50 - 10) * ((100vw - 320px) / ($canvas - 320))) 10px;
+        }
+
+        &._active {
+            background: #0019FF;
+        }
+    }
+
+    &__icon {
+        border-radius: 12.566px;
+        background: linear-gradient(173deg, rgba(255, 255, 255, 0.40) 0%, rgba(255, 255, 255, 0.10) 100%);
+        box-shadow: 0px 2.5132744312286377px 15.079647064208984px -0.6283186078071594px rgba(0, 0, 0, 0.20);
+        backdrop-filter: blur(12.56637191772461px);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 15px;
+        margin-bottom: 38px;
+        width: 70px;
+        height: 70px;
+
+        @media (max-width: $layout) {
+            margin-bottom: calc(10px + (38 - 10) * ((100vw - 320px) / ($canvas - 320)));
+        }
+
+        img {
+            max-width: 100%;
+        }
+    }
+
+    &__body {
+        position: relative;
+        transition: all .3s linear;
+    }
+
+    &__block {
+        position: absolute;
+        opacity: 0;
+        visibility: hidden;
+        transition: all .3s linear;
+        width: 100%;
+
+        &._active {
+            opacity: 1;
+            visibility: visible;
+            position: relative;
+        }
+    }
+}

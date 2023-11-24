@@ -1,0 +1,217 @@
+.space {
+    position: relative;
+
+    &__bg {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+
+        img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+
+            @media (max-width: 576px) {
+                object-position: left;
+            }
+        }
+    }
+
+    &__container {}
+
+    &__body {
+        position: relative;
+        z-index: 1;
+        padding: 110px 0;
+        display: flex;
+        align-items: center;
+
+        @media (max-width: $layout) {
+            padding-top: calc(50px + (110 - 50) * ((100vw - 320px) / ($canvas - 320))) 0;
+        }
+    }
+
+    &__left {
+        display: flex;
+        align-items: center;
+        flex: 1 1 50%;
+    }
+
+    &__icons {
+        margin-right: 30px;
+        max-width: 50px;
+        min-width: 30px;
+        width: 100%;
+
+        @media (max-width: $layout) {
+            margin-right: calc(10px + (30 - 10) * ((100vw - 320px) / ($canvas - 320)));
+
+            @media (max-width: $layout) {
+                max-width: calc(30px + (50 - 30) * ((100vw - 320px) / ($canvas - 320)));
+            }
+        }
+
+        img {
+            width: 100%;
+        }
+    }
+
+    &__blocks {}
+
+    &__block {
+        padding: 30px;
+        opacity: 0;
+        transform: translate(0, 30px);
+        transition: all .5s ease;
+
+        &.active {
+            opacity: 1;
+            transform: translate(0, 0);
+        }
+
+        @media (max-width: $layout) {
+            padding: calc(15px + (30 - 15) * ((100vw - 320px) / ($canvas - 320)));
+        }
+
+        &:nth-child(1) {
+            background: url('../img/space/block1.webp') 0 0 / 100% 100% no-repeat;
+
+            .space__title {
+                text-shadow: 6px 5px 0 rgba($color: #CD376C, $alpha: 1.0);
+
+                @media (max-width: $layout) {
+                    text-shadow: calc(3px + (6 - 3) * ((100vw - 320px) / ($canvas - 320))) calc(2px + (5 - 2) * ((100vw - 320px) / ($canvas - 320))) 0 rgba($color: #CD376C, $alpha: 1.0);
+                }
+            }
+        }
+
+        &:nth-child(2) {
+            background: url('../img/space/block2.webp') 0 0 / 100% 100% no-repeat;
+
+            .space__title {
+                text-shadow: 6px 5px 0 rgba($color: #3CB0DF, $alpha: 1.0);
+
+                @media (max-width: $layout) {
+                    text-shadow: calc(3px + (6 - 3) * ((100vw - 320px) / ($canvas - 320))) calc(2px + (5 - 2) * ((100vw - 320px) / ($canvas - 320))) 0 rgba($color: #3CB0DF, $alpha: 1.0);
+                }
+            }
+        }
+
+        &:nth-child(3) {
+            background: url('../img/space/block3.webp') 0 0 / 100% 100% no-repeat;
+
+            .space__title {
+                text-shadow: 6px 5px 0 rgba($color: #1B526F, $alpha: 1.0);
+
+                @media (max-width: $layout) {
+                    text-shadow: calc(3px + (6 - 3) * ((100vw - 320px) / ($canvas - 320))) calc(2px + (5 - 2) * ((100vw - 320px) / ($canvas - 320))) 0 rgba($color: #1B526F, $alpha: 1.0);
+                }
+            }
+        }
+
+        &:not(:last-child) {
+            margin-bottom: 60px;
+
+            @media (max-width: $layout) {
+                margin-bottom: calc(20px + (60 - 20) * ((100vw - 320px) / ($canvas - 320)));
+            }
+        }
+    }
+
+    &__title {
+        color: var(--white);
+        font-family: "DS Pixel";
+        font-size: rem(50);
+        text-transform: uppercase;
+        text-align: center;
+        margin-bottom: 20px;
+        // text-shadow: 6px 5px 0 rgba($color: #3CB0DF, $alpha: 1.0);
+
+        @media (max-width: $layout) {
+            font-size: calc(rem(20) + (50 - 20) * ((100vw - rem(320)) / ($canvas - 320)));
+            // text-shadow: calc(3px + (6 - 3) * ((100vw - 320px) / ($canvas - 320))) calc(2px + (5 - 2) * ((100vw - 320px) / ($canvas - 320))) 0 rgba($color: #3CB0DF, $alpha: 1.0);
+        }
+    }
+
+    &__text {
+        color: var(--white);
+        font-size: rem(18);
+        font-weight: 300;
+        line-height: 1.3;
+
+        @media (max-width: $layout) {
+            font-size: calc(rem(14) + (18 - 14) * ((100vw - rem(320)) / ($canvas - 320)));
+        }
+
+        p {
+            &:not(:last-child) {
+                margin-bottom: 20px;
+            }
+        }
+    }
+
+    &__right {
+        flex: 1 1 50%;
+        position: relative;
+        min-height: 1300px;
+        min-width: 40px;
+
+        @media (max-width: 576px) {
+            display: none;
+        }
+    }
+
+    &__office {
+        position: absolute;
+        top: 50%;
+        left: 30px;
+        transform: translate(0, -50%);
+
+        img {
+            height: 100%;
+        }
+    }
+
+    &__note {
+        position: relative;
+        top: 30px;
+        transform: translate(100px, -10px);
+        opacity: 0;
+        transition: all .5s ease .3s;
+
+        &.active {
+            opacity: 1;
+            top: 0;
+        }
+
+        @media (max-width: $layout) {
+            transform: translate(calc(-100px + (100 - -100) * ((100vw - 320px) / ($canvas - 320))), calc(-30px + (-80 - -30) * ((100vw - 320px) / ($canvas - 320))));
+        }
+    }
+
+    &__phone {
+        width: 210px;
+        animation: vibro 3s linear infinite;
+
+        img {
+            width: 100%;
+        }
+    }
+
+    &__message {
+        position: absolute;
+        top: 50px;
+        left: 150px;
+        width: fit-content;
+        color: #0E3759;
+        font-size: 16px;
+        background: url('../img/space/text cloud.webp') 0 0 / 100% 100% no-repeat;
+        padding: 10px 20px 25px;
+        white-space: nowrap;
+    }
+}

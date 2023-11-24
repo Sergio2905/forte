@@ -1,0 +1,214 @@
+.art {
+    position: relative;
+
+    &__bg {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+
+        img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+
+    &__container {}
+
+    &__body {
+        position: relative;
+        z-index: 1;
+        padding: 100px 0;
+
+        @media (max-width: $layout) {
+            padding: calc(50px + (100 - 50) * ((100vw - 320px) / ($canvas - 320))) 0;
+        }
+    }
+
+    &__title {
+        color: var(--white);
+        font-family: "DS Pixel";
+        font-size: rem(80);
+        text-transform: uppercase;
+        text-align: center;
+        margin-bottom: 20px;
+        text-shadow: 6px 5px 0 rgba($color: #0E3759, $alpha: 1.0);
+        opacity: 0;
+        transform: translate(0, 30px);
+        transition: all .5s ease;
+
+        &.active {
+            opacity: 1;
+            transform: translate(0, 0);
+        }
+
+        @media (max-width: $layout) {
+            font-size: calc(rem(30) + (80 - 30) * ((100vw - rem(320)) / ($canvas - 320)));
+            text-shadow: calc(3px + (6 - 3) * ((100vw - 320px) / ($canvas - 320))) calc(2px + (5 - 2) * ((100vw - 320px) / ($canvas - 320))) 0 rgba($color: #0E3759, $alpha: 1.0);
+        }
+    }
+
+    &__subtitle {
+        color: var(--white);
+        font-family: "Minecraft";
+        font-size: rem(26);
+        margin-bottom: 60px;
+        text-align: center;
+        opacity: 0;
+        transform: translate(0, 30px);
+        transition: all .5s ease;
+
+        &.active {
+            opacity: 1;
+            transform: translate(0, 0);
+        }
+
+        @media (max-width: $layout) {
+            font-size: calc(rem(18) + (26 - 18) * ((100vw - rem(320)) / ($canvas - 320)));
+            margin-bottom: calc(24px + (60 - 24) * ((100vw - 320px) / ($canvas - 320)));
+        }
+    }
+
+    &__block {
+
+        &_horisontal {
+            margin-bottom: 100px;
+            display: flex;
+            align-items: flex-start;
+
+            @media (max-width: $layout) {
+                margin-bottom: calc(30px + (100 - 30) * ((100vw - 320px) / ($canvas - 320)));
+            }
+
+            @media (max-width: 576px) {
+                flex-direction: column;
+                margin-bottom: -70px;
+            }
+
+            .art {
+                &__image {
+                    flex: 1 1 55%;
+                    padding-bottom: 50%;
+
+                    @media (max-width: 576px) {
+                        width: 55%;
+                    }
+                }
+
+                &__info {
+                    flex: 1 1 45%;
+
+                    @media (max-width: 576px) {
+                        display: flex;
+                        flex-direction: column;
+                        align-items: flex-end;
+                        transform: translate(0, -110px);
+                        padding: 0 10px;
+                    }
+                }
+
+                &__card {
+                    transform: translate(-60px, 30px);
+                    margin-right: -60px;
+
+                    &.active {
+                        transform: translate(-60px, 0);
+
+                        @media (max-width: 576px) {
+                            transform: translate(0, 0);
+                        }
+                    }
+
+                    @media (max-width: 576px) {
+                        transform: translate(0, 0);
+                        margin-right: 0;
+                    }
+                }
+            }
+        }
+
+        &_vertical {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            .art {
+                &__image {
+                    width: 100%;
+                    padding-bottom: 61%;
+                }
+
+                &__card {
+                    max-width: 90%;
+                    transform: translate(0, 0);
+
+                    &.active {
+                        transform: translate(0, -30px);
+                    }
+                }
+            }
+        }
+    }
+
+    &__image {
+        position: relative;
+        border-radius: 10px;
+        overflow: hidden;
+        opacity: 0;
+        transform: translate(0, 30px);
+        transition: all .5s ease;
+
+        &.active {
+            opacity: 1;
+            transform: translate(0, 0);
+        }
+
+        img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+
+    &__info {}
+
+    &__people {
+        max-width: 456px;
+        padding-left: 30px;
+        opacity: 0;
+        transform: translate(0, 30px);
+        transition: all .5s ease .5s;
+
+        &.active {
+            opacity: 1;
+            transform: translate(0, 0);
+        }
+
+        @media (max-width: 576px) {
+            max-width: 44%;
+        }
+
+        img {
+            width: 100%;
+        }
+    }
+
+    &__card {
+        opacity: 0;
+        transform: translate(0, 30px);
+        transition: all .5s ease;
+
+        &.active {
+            opacity: 1;
+            transform: translate(0, 0);
+        }
+    }
+}
