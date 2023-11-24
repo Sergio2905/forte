@@ -1597,7 +1597,7 @@ body.lock {
 }
 
 .treasure__bg picture:not(:first-child) img {
-  animation: blink 2s ease infinite;
+  animation: treasureBlink 2s ease infinite;
 }
 
 .treasure__bg picture:nth-child(2) img {
@@ -1661,7 +1661,7 @@ body.lock {
   transform: translate(0, 0);
 }
 
-@keyframes blink {
+@keyframes treasureBlink {
   0% {
     opacity: 0;
   }
