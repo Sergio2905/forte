@@ -909,7 +909,7 @@ body.lock {
 
 .code-power {
   display: flex;
-  max-width: 327px;
+  max-width: 340px;
   width: 100%;
   opacity: 0;
   transform: translate(0, 30px);
@@ -925,6 +925,7 @@ body.lock {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  padding-right: 10px;
 }
 
 .code-power__text {
@@ -966,21 +967,22 @@ body.lock {
 }
 
 .system__body .system__plane {
-  transform: translate(-100vw, 0);
+  left: -100vw;
   transition: all 1.5s ease;
 }
 
 .system__body .system__bus {
   transform: translate(-100vw, 0);
-  transition: all 2.3s ease;
 }
 
 .system__body.active .system__plane {
-  transform: translate(0, 0);
+  left: 0;
+  animation: airplane 3s ease infinite;
+  animation-delay: 1.5s;
 }
 
 .system__body.active .system__bus {
-  transform: translate(0, 0);
+  animation: bus 6s ease infinite;
 }
 
 .system__top {
@@ -1256,6 +1258,38 @@ body.lock {
   font-family: "Minecraft";
   font-size: 0.875rem;
   line-height: 1.5;
+}
+
+@keyframes bus {
+  0% {
+    transform: translate(-100vw, 0);
+  }
+
+  30% {
+    transform: translate(0, 0);
+  }
+
+  70% {
+    transform: translate(0, 0);
+  }
+
+  100% {
+    transform: translate(100vw, 0);
+  }
+}
+
+@keyframes airplane {
+  0% {
+    transform: translate(0, 0);
+  }
+
+  50% {
+    transform: translate(0, 15px);
+  }
+
+  100% {
+    transform: translate(0, 0);
+  }
 }
 
 .welcome__main {
@@ -1562,6 +1596,30 @@ body.lock {
      object-position: top;
 }
 
+.treasure__bg picture:not(:first-child) img {
+  animation: blink 2s ease infinite;
+}
+
+.treasure__bg picture:nth-child(2) img {
+  animation-delay: 0.2s;
+}
+
+.treasure__bg picture:nth-child(3) img {
+  animation-delay: 1.4s;
+}
+
+.treasure__bg picture:nth-child(4) img {
+  animation-delay: 0.6s;
+}
+
+.treasure__bg picture:nth-child(5) img {
+  animation-delay: 1.8s;
+}
+
+.treasure__bg picture:nth-child(6) img {
+  animation-delay: 1s;
+}
+
 .treasure__body {
   position: relative;
   display: flex;
@@ -1601,6 +1659,24 @@ body.lock {
 .treasure__card.active {
   opacity: 1;
   transform: translate(0, 0);
+}
+
+@keyframes blink {
+  0% {
+    opacity: 0;
+  }
+
+  20% {
+    opacity: 1;
+  }
+
+  40% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 0;
+  }
 }
 
 .app {
@@ -1735,6 +1811,7 @@ body.lock {
 }
 
 .app__phone {
+  max-width: 440px;
   margin: 300px 0 20px;
   position: relative;
   z-index: 1;
@@ -2778,6 +2855,7 @@ body.lock {
 }
 
 .culture__qr {
+  display: block;
   width: 156px;
   height: 156px;
   position: relative;
