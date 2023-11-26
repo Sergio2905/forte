@@ -3189,7 +3189,7 @@ body.lock {
   color: var(--white);
   font-family: "Minecraft";
   font-size: 1.625rem;
-  margin: 0 auto 60px;
+  margin: 0 auto 20px;
   width: -moz-fit-content;
   width: fit-content;
   background: url("../img/culture/text-bg.webp") 0 0/100% 100% no-repeat;
@@ -3205,7 +3205,6 @@ body.lock {
 }
 
 .culture__text_extra {
-  margin: 0 auto 20px;
   background: none;
   text-shadow: 2px 1px 0 #cd376c;
 }
@@ -4105,11 +4104,6 @@ body.lock {
     font-size: calc(0.5rem + 18 * (100vw - 20rem) / 1600);
     padding-inline: calc(10px + 20 * (100vw - 320px) / 1600);
     padding-block: calc(4px + 3 * (100vw - 320px) / 1600);
-    margin-bottom: calc(20px + 40 * (100vw - 320px) / 1600);
-  }
-
-  .culture__text_extra {
-    margin-bottom: calc(10px + 10 * (100vw - 320px) / 1600);
   }
 
   .culture__contacts {
