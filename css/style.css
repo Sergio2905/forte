@@ -3204,6 +3204,12 @@ body.lock {
   transform: translate(0, 0);
 }
 
+.culture__text_extra {
+  margin: 0 auto 20px;
+  background: none;
+  text-shadow: 2px 1px 0 #cd376c;
+}
+
 .culture__contacts {
   margin-bottom: 60px;
 }
@@ -4100,6 +4106,10 @@ body.lock {
     padding-inline: calc(10px + 20 * (100vw - 320px) / 1600);
     padding-block: calc(4px + 3 * (100vw - 320px) / 1600);
     margin-bottom: calc(20px + 40 * (100vw - 320px) / 1600);
+  }
+
+  .culture__text_extra {
+    margin-bottom: calc(10px + 10 * (100vw - 320px) / 1600);
   }
 
   .culture__contacts {
