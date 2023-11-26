@@ -982,7 +982,7 @@ body.lock {
 }
 
 .system__body.active .system__bus {
-  animation: bus 6s ease infinite;
+  animation: bus 8s ease infinite;
 }
 
 .system__top {
@@ -1174,7 +1174,6 @@ body.lock {
 
 .white-system__body {
   padding: 30px 20px;
-  background: rgba(255, 255, 255, 0.8);
   position: relative;
   z-index: 1;
 }
@@ -1265,11 +1264,11 @@ body.lock {
     transform: translate(-100vw, 0);
   }
 
-  30% {
+  20% {
     transform: translate(0, 0);
   }
 
-  70% {
+  80% {
     transform: translate(0, 0);
   }
 
@@ -2010,6 +2009,16 @@ body.lock {
      object-fit: cover;
 }
 
+.art .art__gif img {
+  left: 50%;
+  transform: translate(-50%, 0);
+  -o-object-fit: contain;
+     object-fit: contain;
+  -o-object-position: bottom center;
+     object-position: bottom center;
+  width: 50%;
+}
+
 .art__people {
   max-width: 456px;
   padding-left: 30px;
@@ -2092,6 +2101,7 @@ body.lock {
   opacity: 0;
   transform: translate(0, 30px);
   transition: all 0.5s ease;
+  position: relative;
 }
 
 .dress__image.active {
@@ -2101,6 +2111,74 @@ body.lock {
 
 .dress__image img {
   width: 100%;
+}
+
+.dress__blink {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  visibility: hidden;
+}
+
+.dress__blink:nth-of-type(2) {
+  animation: dressBlink1 8s ease infinite;
+}
+
+.dress__blink:nth-of-type(3) {
+  animation: dressBlink9 8s ease infinite;
+}
+
+.dress__blink:nth-of-type(4) {
+  animation: dressBlink4 8s ease infinite;
+}
+
+.dress__blink:nth-of-type(5) {
+  animation: dressBlink8 8s ease infinite;
+}
+
+.dress__blink:nth-of-type(6) {
+  animation: dressBlink2 8s ease infinite;
+}
+
+.dress__blink:nth-of-type(7) {
+  animation: dressBlink6 8s ease infinite;
+}
+
+.dress__blink:nth-of-type(8) {
+  animation: dressBlink3 8s ease infinite;
+}
+
+.dress__blink:nth-of-type(9) {
+  animation: dressBlink7 8s ease infinite;
+}
+
+.dress__blink:nth-of-type(10) {
+  animation: dressBlink10 8s ease infinite;
+}
+
+.dress__blink:nth-of-type(11) {
+  animation: dressBlink12 8s ease infinite;
+}
+
+.dress__blink:nth-of-type(12) {
+  animation: dressBlink11 8s ease infinite;
+}
+
+.dress__blink:nth-of-type(13) {
+  animation: dressBlink5 8s ease infinite;
+}
+
+.dress__blink img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 .dress__right {
@@ -2114,6 +2192,385 @@ body.lock {
 
 .dress__right .card:nth-child(3) {
   transition: all 0.5s ease 0.2s;
+}
+
+@keyframes dressBlink1 {
+  0% {
+    opacity: 0;
+    visibility: hidden;
+  }
+
+  1% {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  6% {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  7% {
+    opacity: 0;
+    visibility: hidden;
+  }
+
+  100% {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+
+@keyframes dressBlink2 {
+  0% {
+    opacity: 0;
+    visibility: hidden;
+  }
+
+  6% {
+    opacity: 0;
+    visibility: hidden;
+  }
+
+  7% {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  12% {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  13% {
+    opacity: 0;
+    visibility: hidden;
+  }
+
+  100% {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+
+@keyframes dressBlink3 {
+  0% {
+    opacity: 0;
+    visibility: hidden;
+  }
+
+  13% {
+    opacity: 0;
+    visibility: hidden;
+  }
+
+  14% {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  19% {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  20% {
+    opacity: 0;
+    visibility: hidden;
+  }
+
+  100% {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+
+@keyframes dressBlink4 {
+  0% {
+    opacity: 0;
+    visibility: hidden;
+  }
+
+  20% {
+    opacity: 0;
+    visibility: hidden;
+  }
+
+  21% {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  26% {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  27% {
+    opacity: 0;
+    visibility: hidden;
+  }
+
+  100% {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+
+@keyframes dressBlink5 {
+  0% {
+    opacity: 0;
+    visibility: hidden;
+  }
+
+  27% {
+    opacity: 0;
+    visibility: hidden;
+  }
+
+  28% {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  33% {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  34% {
+    opacity: 0;
+    visibility: hidden;
+  }
+
+  100% {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+
+@keyframes dressBlink6 {
+  0% {
+    opacity: 0;
+    visibility: hidden;
+  }
+
+  34% {
+    opacity: 0;
+    visibility: hidden;
+  }
+
+  35% {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  40% {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  41% {
+    opacity: 0;
+    visibility: hidden;
+  }
+
+  100% {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+
+@keyframes dressBlink7 {
+  0% {
+    opacity: 0;
+    visibility: hidden;
+  }
+
+  41% {
+    opacity: 0;
+    visibility: hidden;
+  }
+
+  42% {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  47% {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  48% {
+    opacity: 0;
+    visibility: hidden;
+  }
+
+  100% {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+
+@keyframes dressBlink8 {
+  0% {
+    opacity: 0;
+    visibility: hidden;
+  }
+
+  48% {
+    opacity: 0;
+    visibility: hidden;
+  }
+
+  49% {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  54% {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  55% {
+    opacity: 0;
+    visibility: hidden;
+  }
+
+  100% {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+
+@keyframes dressBlink9 {
+  0% {
+    opacity: 0;
+    visibility: hidden;
+  }
+
+  55% {
+    opacity: 0;
+    visibility: hidden;
+  }
+
+  56% {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  61% {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  62% {
+    opacity: 0;
+    visibility: hidden;
+  }
+
+  100% {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+
+@keyframes dressBlink10 {
+  0% {
+    opacity: 0;
+    visibility: hidden;
+  }
+
+  62% {
+    opacity: 0;
+    visibility: hidden;
+  }
+
+  63% {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  66% {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  67% {
+    opacity: 0;
+    visibility: hidden;
+  }
+
+  100% {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+
+@keyframes dressBlink11 {
+  0% {
+    opacity: 0;
+    visibility: hidden;
+  }
+
+  67% {
+    opacity: 0;
+    visibility: hidden;
+  }
+
+  68% {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  73% {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  74% {
+    opacity: 0;
+    visibility: hidden;
+  }
+
+  100% {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+
+@keyframes dressBlink12 {
+  0% {
+    opacity: 0;
+    visibility: hidden;
+  }
+
+  74% {
+    opacity: 0;
+    visibility: hidden;
+  }
+
+  75% {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  80% {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  81% {
+    opacity: 0;
+    visibility: hidden;
+  }
+
+  100% {
+    opacity: 0;
+    visibility: hidden;
+  }
 }
 
 .vacation {
