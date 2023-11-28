@@ -968,7 +968,7 @@ body.lock {
 
 .system__body .system__plane {
   left: -100vw;
-  transition: all 3s ease;
+  transition: all 5s ease;
 }
 
 .system__body .system__bus {
@@ -978,7 +978,7 @@ body.lock {
 .system__body.active .system__plane {
   left: 0;
   animation: airplane 3s ease infinite;
-  animation-delay: 3s;
+  animation-delay: 5s;
 }
 
 .system__body.active .system__bus {
@@ -1628,6 +1628,7 @@ body.lock {
   width: 100%;
   z-index: 1;
   padding: 100px 0 60px;
+  margin: 0 auto;
 }
 
 .treasure__title {
@@ -3518,13 +3519,14 @@ body.lock {
   z-index: 1;
   padding: 110px 0;
   display: flex;
-  align-items: center;
+  align-items: flex-end;
 }
 
 .space__left {
   display: flex;
   align-items: center;
   flex: 1 1 50%;
+  padding-right: 20px;
 }
 
 .space__icons {
@@ -3612,7 +3614,7 @@ body.lock {
   height: 100%;
   width: 100%;
   top: 50%;
-  left: 30px;
+  left: 0;
   transform: translate(0, -50%);
 }
 
@@ -4646,6 +4648,10 @@ body.lock {
   .space__bg img {
     -o-object-position: left;
        object-position: left;
+  }
+
+  .space__left {
+    padding-right: 0;
   }
 
   .space__right {
