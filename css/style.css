@@ -757,7 +757,7 @@ body.lock {
 }
 
 .power__year {
-  color: var(--blue);
+  color: #2A91A6;
   font-family: "Minecraft";
   font-size: 1.25rem;
   border-radius: 10px;
@@ -790,7 +790,7 @@ body.lock {
   display: flex;
   flex-direction: column;
   align-items: center;
-  color: var(--blue);
+  color: #2A91A6;
   font-family: "Minecraft";
 }
 
@@ -968,7 +968,7 @@ body.lock {
 
 .system__body .system__plane {
   left: -100vw;
-  transition: all 1.5s ease;
+  transition: all 3s ease;
 }
 
 .system__body .system__bus {
@@ -978,7 +978,7 @@ body.lock {
 .system__body.active .system__plane {
   left: 0;
   animation: airplane 3s ease infinite;
-  animation-delay: 1.5s;
+  animation-delay: 3s;
 }
 
 .system__body.active .system__bus {
@@ -1623,7 +1623,6 @@ body.lock {
   position: relative;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
   max-width: 600px;
   height: 1240px;
   width: 100%;
@@ -1637,7 +1636,7 @@ body.lock {
   font-size: 3.125rem;
   text-transform: uppercase;
   text-align: center;
-  margin-bottom: 20px;
+  margin-bottom: 40px;
   text-shadow: 6px 5px 0 #cd376c;
   opacity: 0;
   transform: translate(0, 30px);
@@ -3189,7 +3188,7 @@ body.lock {
   color: var(--white);
   font-family: "Minecraft";
   font-size: 1.625rem;
-  margin: 0 auto 20px;
+  margin: 0 auto 40px;
   width: -moz-fit-content;
   width: fit-content;
   background: url("../img/culture/text-bg.webp") 0 0/100% 100% no-repeat;
@@ -3544,6 +3543,8 @@ body.lock {
   opacity: 0;
   transform: translate(0, 30px);
   transition: all 0.5s ease;
+  border: 2px solid rgba(255, 255, 255, 0.8);
+  border-radius: 10px;
 }
 
 .space__block.active {
@@ -3552,7 +3553,7 @@ body.lock {
 }
 
 .space__block:nth-child(1) {
-  background: url("../img/space/block1.webp") 0 0/100% 100% no-repeat;
+  background: rgba(205, 54, 108, 0.4);
 }
 
 .space__block:nth-child(1) .space__title {
@@ -3560,7 +3561,7 @@ body.lock {
 }
 
 .space__block:nth-child(2) {
-  background: url("../img/space/block2.webp") 0 0/100% 100% no-repeat;
+  background: rgba(60, 176, 223, 0.4);
 }
 
 .space__block:nth-child(2) .space__title {
@@ -3568,7 +3569,7 @@ body.lock {
 }
 
 .space__block:nth-child(3) {
-  background: url("../img/space/block3.webp") 0 0/100% 100% no-repeat;
+  background: rgba(27, 82, 111, 0.4);
 }
 
 .space__block:nth-child(3) .space__title {
@@ -3608,6 +3609,8 @@ body.lock {
 
 .space__office {
   position: absolute;
+  height: 100%;
+  width: 100%;
   top: 50%;
   left: 30px;
   transform: translate(0, -50%);
@@ -4104,6 +4107,7 @@ body.lock {
     font-size: calc(0.5rem + 18 * (100vw - 20rem) / 1600);
     padding-inline: calc(10px + 20 * (100vw - 320px) / 1600);
     padding-block: calc(4px + 3 * (100vw - 320px) / 1600);
+    margin-bottom: calc(20px + 20 * (100vw - 320px) / 1600);
   }
 
   .culture__contacts {
