@@ -968,7 +968,7 @@ body.lock {
 
 .system__body .system__plane {
   left: -100vw;
-  transition: all 5s ease;
+  transition: all 1.5s ease;
 }
 
 .system__body .system__bus {
@@ -978,7 +978,7 @@ body.lock {
 .system__body.active .system__plane {
   left: 0;
   animation: airplane 3s ease infinite;
-  animation-delay: 5s;
+  animation-delay: 1.5s;
 }
 
 .system__body.active .system__bus {
@@ -2623,7 +2623,7 @@ body.lock {
   margin-bottom: 60px;
   max-width: 900px;
   width: 100%;
-  animation: plane 5s linear infinite;
+  animation: plane 10s linear infinite;
 }
 
 .vacation__plane img {
