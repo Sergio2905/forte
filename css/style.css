@@ -1116,6 +1116,7 @@ body.lock {
   font-weight: 300;
   max-width: 360px;
   width: 100%;
+  padding: 0 10px;
 }
 
 .plane-system__text span {
